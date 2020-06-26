@@ -1,3 +1,6 @@
+# Looking for maintainers! Please see Issues.
+With many projects going on at once, I've been neglecting Rbx_CustomFont for a while now. If you're willing to take on the maintenance, please reply to the relevant issue.
+
 # Rbx_CustomFont
 
 ## Custom font system for Roblox
