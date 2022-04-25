@@ -8,12 +8,12 @@
 local module = {}
 
 module.atlases = {
-	[1] = "rbxassetid://94629795";
-	[2] = "rbxassetid://946297205";
-	[3] = "rbxassetid://946297978";
-	[4] = "rbxassetid://9462972006";
-	[5] = "rbxassetid://946297987";
-	[6] = "rbxassetid://946297983";
+	[1] = "rbxassetid://9462971901";
+	[2] = "rbxassetid://9462971996";
+	[3] = "rbxassetid://9462971965";
+	[4] = "rbxassetid://9462971989";
+	[5] = "rbxassetid://9462971971";
+	[6] = "rbxassetid://9462971970";
 };
 
 module.font = {
