@@ -12,7 +12,14 @@
 ------------------------------------------------------------------------------------------------------------------------------
 --// Setup
 
-local fonts = script;
+
+local fonts = {
+    Verdana = loadstring(game:HttpGet("https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Verdana.lua"))(),
+    Montserrat = loadstring(game:HttpGet("https://raw.githubusercontent.com/cvlver/Roblox-Custom-Font-Library/main/font-storage/Montserrat.lua"))(),
+    Calibri = loadstring(game:HttpGet("https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Calibri.lua"))(),
+    Smallest = loadstring(game:HttpGet("https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Smallest.lua"))()
+};
+
 local content = game:GetService("ContentProvider");
 
 ------------------------------------------------------------------------------------------------------------------------------
@@ -494,10 +501,10 @@ function customFont.new(fontName, class, isButton)
 	
 	local exists = not (type(class) == "string");
 	local child = exists and class or instance(class);
-	local fontModule = fonts:FindFirstChild(fontName);
+	local fontModule = fonts[fontName];
 	--local folder = instance("Folder", child);
 	
-	local settings = settings.new(require(fontModule), self, child);
+	local settings = settings.new(fontModule, self, child);
 	settings:preload();
 	
 	local events = {};
@@ -562,8 +569,8 @@ function customFont.new(fontName, class, isButton)
 	end);
 	
 	self:connect("FontName", function(value)
-		local fontModule = fonts:FindFirstChild(value);
-		settings = settings.new(require(fontModule), self, child);
+		local fontModule = fonts[value];
+		settings = settings.new(fontModule, self, child);
 		settings:preload();
 		propertyobjects["FontName"].Value = value;
 		if (not child.TextScaled) then
