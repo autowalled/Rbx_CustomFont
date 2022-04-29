@@ -19,7 +19,8 @@ local fonts = {
     Calibri = loadstring(game:HttpGet("https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Calibri.lua"))(),
     Smallest = loadstring(game:HttpGet("https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Smallest.lua"))(),
     Tahoma = loadstring(game:HttpGet("https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Tahoma.lua"))(),
-    TF2 = loadstring(game:HttpGet("https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/TF2.lua"))()
+    TF2 = loadstring(game:HttpGet("https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/TF2.lua"))(),
+    ["Dogica Pixel"] = loadstring(game:HttpGet("https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Dogical%20Pixel.lua"))()
 };
 
 local content = game:GetService("ContentProvider");
