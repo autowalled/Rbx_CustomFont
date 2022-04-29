@@ -18,7 +18,8 @@ local fonts = {
     Montserrat = loadstring(game:HttpGet("https://raw.githubusercontent.com/cvlver/Roblox-Custom-Font-Library/main/font-storage/Montserrat.lua"))(),
     Calibri = loadstring(game:HttpGet("https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Calibri.lua"))(),
     Smallest = loadstring(game:HttpGet("https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Smallest.lua"))(),
-    Tahoma = loadstring(game:HttpGet("https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Tahoma.lua"))()
+    Tahoma = loadstring(game:HttpGet("https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Tahoma.lua"))(),
+    TF2 = loadstring(game:HttpGet("https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/TF2.lua"))()
 };
 
 local content = game:GetService("ContentProvider");
