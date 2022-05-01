@@ -12,8 +12,63 @@
 ------------------------------------------------------------------------------------------------------------------------------
 --// Setup
 
+local cache = {}
+local fonts = {} --fonts[fontName] = fontTbl
+do
+	-- Variables
+	--Fyi u cant just fucking make the fonts variable nil
+	--because its used
+	-- dont worry it will be set later
+	cache.folder = "egoFontCache"
+	cache.dependencies = {
+		Verdana = "https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Verdana.lua",
+		Montserrat = "https://raw.githubusercontent.com/cvlver/Roblox-Custom-Font-Library/main/font-storage/Montserrat.lua",
+		Calibri = "https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Calibri.lua",
+		Smallest = "https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Smallest.lua",
+		Tahoma = "https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Tahoma.lua",
+		TF2 = "https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/TF2.lua",
+		["Dogica Pixel"] = "https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Dogical%20Pixel.lua"
+	}
+	cache.extension = ".txt"
+	cache.data = {}
 
-local fonts = {
+	-- Functions
+	function cache:resolve()
+		-- Create Folder
+		local forceDL = false
+		if not isfolder(self.folder) then
+			-- Create the folder
+			makefolder(self.folder)
+			forceDL = true
+		end
+
+		-- Resolve the ones that exist and that
+		for name, repo in next, self.dependencies do
+			-- Check if we need to dl it
+			local pathToFile = self.folder .. "/" .. name .. self.extension
+			local dlRequired = forceDL or not isfile(pathToFile)
+			local fileData   = dlRequired and game:HttpGet(repo) or readfile(pathToFile)
+			cache.data[name] = fileData
+			
+			-- Save file if it didn't exist
+			if dlRequired then
+				writefile(pathToFile, fileData)
+			end
+		end
+
+		-- 1
+		for name, scr in next, cache.data do
+			fonts[name] = loadstring(scr)()--u forgor :cat: ok!
+		end
+		warn("cache resolved")
+	end
+end
+
+-- Resolve Cache
+cache:resolve()
+
+
+--[[local fonts = {
     Verdana = loadstring(game:HttpGet("https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Verdana.lua"))(),
     Montserrat = loadstring(game:HttpGet("https://raw.githubusercontent.com/cvlver/Roblox-Custom-Font-Library/main/font-storage/Montserrat.lua"))(),
     Calibri = loadstring(game:HttpGet("https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Calibri.lua"))(),
@@ -21,7 +76,7 @@ local fonts = {
     Tahoma = loadstring(game:HttpGet("https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Tahoma.lua"))(),
     TF2 = loadstring(game:HttpGet("https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/TF2.lua"))(),
     ["Dogica Pixel"] = loadstring(game:HttpGet("https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Dogical%20Pixel.lua"))()
-};
+};]]
 
 local content = game:GetService("ContentProvider");
 
