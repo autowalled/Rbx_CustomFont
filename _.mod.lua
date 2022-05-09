@@ -27,7 +27,8 @@ do
 		Smallest = "https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Smallest.lua",
 		Tahoma = "https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Tahoma.lua",
 		TF2 = "https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/TF2.lua",
-		["Dogica Pixel"] = "https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Dogical%20Pixel.lua"
+		["Dogica Pixel"] = "https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Dogical%20Pixel.lua",
+		OutlinedPixel = "https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/OutlinedPixel.lua"
 	}
 	cache.extension = ".txt"
 	cache.data = {}
