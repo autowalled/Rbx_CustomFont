@@ -21,14 +21,13 @@ do
 	-- dont worry it will be set later
 	cache.folder = "egoFontCache"
 	cache.dependencies = {
-		Verdana = "https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Verdana.lua",
-		Montserrat = "https://raw.githubusercontent.com/cvlver/Roblox-Custom-Font-Library/main/font-storage/Montserrat.lua",
-		Calibri = "https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Calibri.lua",
-		Smallest = "https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Smallest.lua",
-		Tahoma = "https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Tahoma.lua",
-		TF2 = "https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/TF2.lua",
-		["Dogica Pixel"] = "https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/Dogical%20Pixel.lua",
-		OutlinedPixel = "https://raw.githubusercontent.com/integerisqt/Rbx_CustomFont/master/OutlinedPixel.lua"
+		Verdana = "https://raw.githubusercontent.com/autowalled/Rbx_CustomFont/master/Verdana.lua",
+		Calibri = "https://raw.githubusercontent.com/autowalled/Rbx_CustomFont/master/Calibri.lua",
+		Smallest = "https://raw.githubusercontent.com/autowalled/Rbx_CustomFont/master/Smallest.lua",
+		Tahoma = "https://raw.githubusercontent.com/autowalled/Rbx_CustomFont/master/Tahoma.lua",
+		TF2 = "https://raw.githubusercontent.com/autowalled/Rbx_CustomFont/master/TF2.lua",
+		["Dogica Pixel"] = "https://raw.githubusercontent.com/autowalled/Rbx_CustomFont/master/Dogical%20Pixel.lua",
+		OutlinedPixel = "https://raw.githubusercontent.com/autowalled/Rbx_CustomFont/master/OutlinedPixel.lua"
 	}
 	cache.extension = ".txt"
 	cache.data = {}
